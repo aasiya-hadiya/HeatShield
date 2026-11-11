@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Tajawal', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #f7f5ee;
+    color: #163628;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  [dir="rtl"], :lang(ar) {
+    font-family: 'Tajawal', 'Amiri', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-arabic-calligraphy {
+    font-family: 'Amiri', 'Tajawal', serif;
+  }
+
+  .font-arabic-ruqaa {
+    font-family: 'Aref Ruqaa', 'Amiri', serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom cream and heritage green scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0ece1;
+}
+::-webkit-scrollbar-thumb {
+  background: #234c37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #173829;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast touch focus rings */
+:focus-visible {
+  outline: 2px solid #1b4332;
+  outline-offset: 2px;
+}
